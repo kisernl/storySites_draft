@@ -1,4 +1,4 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -32,8 +32,8 @@
 
 #navbar__logo {
     background-color:#333838;
+    background-color: #646d6d;
     background-image: linear-gradient(to top, #4C5252 0%, #97A0A0 100%);
-    background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -86,15 +86,16 @@
     outline: none;
     border-radius: 4px;
     /* gradients for future projects - https://uigradients.com/ */
-    background: #809C96;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #D6DFDD, #809C96);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #D6DFDD, #809C96); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #809C96;
+    background: -webkit-linear-gradient(to bottom, #D6DFDD, #809C96);
+    background: linear-gradient(to bottom, #D6DFDD, #809C96);
     color: #fff;
     transition: all 0.3s ease;
 }
 
 .navbar__links:hover {
-    color: #877D7D;
+    /* color: #877D7D; */
+    color: #9518fc;
     transition: all 0.3s ease;
 }
 
@@ -115,7 +116,7 @@
         margin: 0;
         width: 100%;
         position: absolute;
-        /* top: -1000px; */
+        top: -1000px;
         opacity: 1;
         transition: all 0.5s ease;
         z-index: -1;
@@ -123,6 +124,7 @@
 
     .navbar__menu.active {
         background: #DFDDD6;
+        /* background: #131313; */
         top: 100%;
         opacity: 1;
         transition: all 0.5s ease;
@@ -140,7 +142,7 @@
         height: 3px;
         margin: 5px auto;
         transition: all 0.3s ease-in-out;
-        background: #809C96;
+        background: #333838;
     }
 
     .navbar__item {
@@ -154,7 +156,7 @@
         display: table;
     }
 
-    .navbar_btn {
+    .navbar__btn {
         padding-bottom: 2rem;
     }
 
@@ -163,6 +165,95 @@
         justify-content: center;
         align-items: center;
         width: 80%;
+        height: 80px;
         margin: 0;
     }
+
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+
+    .navbar__toggle .bar {
+        display: block;
+        cursor: pointer;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
 }
+
+/* Hero Section */
+.hero {
+    background: #809C96;
+    background: linear-gradient(to right, #809C96, #4C5252);
+    padding: 200px, 0;
+}
+
+.hero__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 90%;
+    text-align: center;
+    padding: 30px;
+}
+
+.hero__heading {
+    font-size: 100px;
+    margin-bottom: 24px;
+    color: #fff;
+}
+
+.hero__heading span {
+    background: #809C96;
+    background: -webkit-linear-gradient(to bottom,#97bab3, #162925);
+    background: linear-gradient(to bottom, #97bab3, #162925);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.hero__description {
+    font-size: 60px;
+    background: #809C96;
+    background: -webkit-linear-gradient(to bottom, #D6DFDD, #809C96);
+    background: linear-gradient(to bottom, #D6DFDD, #809C96);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.highlight {
+    border-bottom: 4px solid rgb(132, 0 , 255);
+}
+
+@media screen and (max-width: 768px) {
+    .hero__heading {
+        font-size: 60px;
+    }
+
+    .hero__description {
+        font-size: 40px;
+    }
+}
+
+/* paused video at approx 50 min */
