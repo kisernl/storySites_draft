@@ -256,4 +256,122 @@
     }
 }
 
-/* paused video at approx 50 min */
+/* About Section */
+.main {
+    background-color: #4C5252;
+    padding: 10rem 0;
+}
+
+.main__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    margin: o auto;
+    height: 90%;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+}
+
+.main__content {
+    color: #fff;
+    width: 100%;
+}
+
+.main__content h1 {
+    font-size: 2rem;
+    background-color:#333838;
+    background-color: #646d6d;
+    background-image: linear-gradient(to top, #4C5252 0%, #97A0A0 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+}
+
+.main__content h2{
+    font-size: 4rem;
+    background: #809C96;
+    background: -webkit-linear-gradient(to bottom, #D6DFDD, #809C96);
+    background: linear-gradient(to bottom, #D6DFDD, #809C96);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.main__content p {
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.main__btn {
+    font-size: 1.8rem;
+    background: #809C96;
+    background: -webkit-linear-gradient(to bottom, #D6DFDD, #809C96);
+    background: linear-gradient(to bottom, #D6DFDD, #809C96);
+    padding: 20px 60px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 2rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s;
+    outline: none;
+}
+
+.main__btn a {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-decoration: none;
+}
+
+.main__btn:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    /* background: #a9aead; */
+    background: #485563;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #29323c, #485563);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #29323c, #485563); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    transition: all 0.35s;
+    border-radius: 4px;
+}
+
+.main__btn:hover {
+    color: #fff;
+}
+
+.main__btn:hover:after {
+    width: 100%;
+}
+
+.main__img--container {
+    text-align: center;
+}
+
+.main__img--card {
+    margin: 10px;
+    height: 500px;
+    width: 500px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    /* background-image: linear-gradient(to top, #4C5252 0%, #97A0A0 100%); */
+    background: #485563;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #29323c, #485563);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #29323c, #485563); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
